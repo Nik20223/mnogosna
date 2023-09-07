@@ -10,6 +10,7 @@ driver.maximize_window()
 @pytest.fixture()
 def set_up():
     print("mnogosna.ru")
+@allure.description("Test mnogosna testproject")
 def test_ascona(set_up):
     mp = Main_page(driver)
     mp.search_send_data()
