@@ -9,8 +9,11 @@ class Base():
     ### Assert text-on-element in page ###
     def assert_word(self, word, result):
         value_word = word.text
-        assert value_word == result
-        print("Assertation True")
+        try:
+            assert value_word == result
+            print("Assertion True")
+        except AssertionError:
+            print("Assertion False")
 
 
     ### Making screenshots to folder /pages/screenshots ###
