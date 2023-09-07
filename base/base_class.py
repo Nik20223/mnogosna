@@ -15,6 +15,13 @@ class Base():
         except AssertionError:
             print("Assertion False")
 
+    def assert_url(self, word, result):
+        value_word = word
+        try:
+            assert value_word == result
+            print("Assertion True")
+        except AssertionError:
+            print("Assertion False")
 
     ### Making screenshots to folder /pages/screenshots ###
     def screenshot(self):
